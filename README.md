@@ -41,7 +41,7 @@ Open `library.mismatch.tsv` in your spreadsheet app and check for problems found
 ## Caveats
 
 > [!WARNING]
-> This is a proof of concept and not extensively tested. It may produce incomplete or incorrect results in edge cases, such as live photos or stacked assets. Please report if you encounter bugs.
+> This is a proof of concept and not extensively tested. It may produce incomplete or incorrect results in edge cases, such as stacked assets. Please report if you encounter bugs.
 
 Current limitations:
 - Filenames containing the pipe character `|`, tabs or newlines are not supported.

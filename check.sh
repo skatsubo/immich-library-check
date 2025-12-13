@@ -17,8 +17,9 @@ EOF
 )
 find_cmd=$(cat <<EOF
 {
-find "$datadir/library" -type f -not -iname ".immich" -not -iname "*.xmp" -exec stat -t -c "fs|library|%n|%s|%.19y" {} +
-find "$datadir/upload"  -type f -not -iname ".immich" -not -iname "*.xmp" -exec stat -t -c "fs|upload|%n|%s|%.19y" {} +
+find "$datadir/library"       -type f -not -iname ".immich" -not -iname "*.xmp" -exec stat -t -c "fs|library|%n|%s|%.19y" {} +
+find "$datadir/upload"        -type f -not -iname ".immich" -not -iname "*.xmp" -exec stat -t -c "fs|upload|%n|%s|%.19y" {} +
+find "$datadir/encoded-video" -type f -not -iname ".immich" -name "*-MP.mp4"    -exec stat -t -c "fs|encoded-video|%n|%s|%.19y" {} +
 } | sort -k3,3 -t '|'
 EOF
 )
