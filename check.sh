@@ -42,6 +42,6 @@ echo "Files written:
   library.tsv
   library.mismatch.tsv
 Total assets/files:
-$(wc -l <library.tsv)
+  $(($(wc -l <library.tsv)-1))
 Inconsistencies found:
-$(wc -l <library.mismatch.tsv)"
+  $(($(wc -l <library.mismatch.tsv)-1))"
